@@ -4,17 +4,16 @@ cd "C:\Program Files\MySQL\MySQL Server 8.0\bin"
 in the command prompt.
 
 type
-mysql --local_infile=1 -u root -pABC menagerie
+mysql --local_infile=1 -u root -p
 
-where ABC is your password for MySQL and menagerie is the database you're working on (replace ABC & menagerie with whatever is your password & database name respectively)
 
 MySQL will open in command prompt. You can type your commands like:
-mysql> use menagerie
+mysql> use db;
 
 Database changed
 
-mysql> load data local infile '/path/pet.txt' into table pet;
-
-Query OK, 8 rows affected, 7 warnings (0.00 sec)
+mysql>  load data local infile "C:\\Program Files\\MySQL\\MySQL Server 8.0\\Uploads\\Superstore_orders.csv" into table orders_yt;
+Query OK, 9995 rows affected, 65535 warnings (0.18 sec)
+Records: 9995  Deleted: 0  Skipped: 0  Warnings: 209895
 
 and it should work...
