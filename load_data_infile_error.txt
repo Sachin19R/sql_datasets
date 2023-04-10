@@ -12,8 +12,8 @@ mysql> use db;
 
 Database changed
 
-mysql>  load data local infile "C:\\Program Files\\MySQL\\MySQL Server 8.0\\Uploads\\Superstore_orders.csv" into table orders_yt;
-Query OK, 9995 rows affected, 65535 warnings (0.18 sec)
-Records: 9995  Deleted: 0  Skipped: 0  Warnings: 209895
+mysql> load data local infile "C:\\Program Files\\MySQL\\MySQL Server 8.0\\Uploads\\Superstore_orders.csv" into table orders_yt fields terminated by ',' ignore 1 lines;
+Query OK, 9994 rows affected, 25334 warnings (0.40 sec)
+Records: 9994  Deleted: 0  Skipped: 0  Warnings: 25334
 
 and it should work...
